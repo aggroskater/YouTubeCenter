@@ -21471,6 +21471,7 @@
       function updateQuality(){
         if (ytcenter.player.fixPreferredQuality_timer === null) return;
         if (api.getPlaybackQuality() !== ytcenter.player.config.args.vq) {
+          con.log("api.getPlaybackQuality doesn't match user specified quality");
           if (priorityIndex < priority.length) {
             priorityIndex = priorityIndex + 1;
             ytcenter.player.setQuality(priority[priorityIndex]);
