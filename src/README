@@ -1,0 +1,5 @@
+Going to attempt to modularize this. I find it nearly impossible to keep up 
+with the tens of thousands of lines of code in a single js file. Seeing as 
+this code isn't being pushed over the web --it's an addon in one form or 
+another-- it shouldn't hurt performance at all to split this up into more 
+manageable files.
