@@ -22092,6 +22092,9 @@
             ]
           }
         ], []);
+
+      //NOT using feather.
+ 
       } else {
         var sentimentActions = document.getElementById("watch7-sentiment-actions");
         if (sentimentActions && sentimentActions.parentNode && ytcd) {
