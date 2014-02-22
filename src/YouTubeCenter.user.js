@@ -167,7 +167,11 @@
       return true;
     }
   }
-  
+ 
+  // This function is over 20,000 lines long... I'm thinking an IDE or some 
+  // vim plugins would be quite beneficial in getting a bird's eye view of 
+  // this project.
+ 
   var main_function = function(injected, identifier, devbuild, devnumber, _unsafeWindow){
     "use strict";
     /* UTILS */
