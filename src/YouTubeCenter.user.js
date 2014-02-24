@@ -73,6 +73,7 @@
 // @contributionURL https://github.com/YePpHa/YouTubeCenter/wiki/Donate
 // ==/UserScript==
 
+/* Start of Global Script */
 (function(){
   "use strict";
   function inject(func) {
@@ -23353,11 +23354,12 @@
       } catch (e) {
         con.error(e);
       }
-    })(); /* END hijacking function */
+    })(); /* END ytcenter global variable hijacking function */
   }; /* END Main function */
 
-  /* Inject the script into the window */
+// ========= Begin global script injection of main_function() ========= //
 
+  /* Determine if we have unsafeWindow */
   var crossUnsafeWindow = (function(){
     var a;
     try {
@@ -23367,9 +23369,13 @@
       return a || window;
     }
   })();
-  
+
+
+  /* Inject the script into the window */
   if (window && window.navigator && window.navigator.userAgent && window.navigator.userAgent.indexOf('Chrome') > -1 && @identifier@ !== 2 && @identifier@ !== 4) {
     try {
+
+      /* We've got an unsafeWindow. Proceed to inject main_function() */
       if (crossUnsafeWindow === window) {
         window.addEventListener("message", function(e){
           if (!e || !e.data) return; // Checking if data is present
@@ -23387,7 +23393,10 @@
         }, false);
         
         inject(main_function);
-      } else {
+      } 
+
+      /* No unsafe window. Try calling main_function() directly */
+      else {
         //try {
           main_function(false, @identifier@, @devbuild@, @devnumber@, crossUnsafeWindow);
         /*} catch (e) {
@@ -23407,7 +23416,15 @@
       
       inject(main_function);
     }
-  } else {
+  } 
+
+  /* I'm guessing we should never actually hit this line, but its here in 
+   * case something else up there barfed. 
+   */  
+  else {
     main_function(false, @identifier@, @devbuild@, @devnumber@, crossUnsafeWindow);
   }
+
+// ========= END global script injection of main_function() ========= //
+
 })(); /* End global script */
