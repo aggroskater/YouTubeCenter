@@ -23353,8 +23353,11 @@
       } catch (e) {
         con.error(e);
       }
-    })();
-  };
+    })(); /* END hijacking function */
+  }; /* END Main function */
+
+  /* Inject the script into the window */
+
   var crossUnsafeWindow = (function(){
     var a;
     try {
@@ -23407,4 +23410,4 @@
   } else {
     main_function(false, @identifier@, @devbuild@, @devnumber@, crossUnsafeWindow);
   }
-})();
+})(); /* End global script */
