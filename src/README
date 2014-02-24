@@ -3,3 +3,16 @@ with the tens of thousands of lines of code in a single js file. Seeing as
 this code isn't being pushed over the web --it's an addon in one form or 
 another-- it shouldn't hurt performance at all to split this up into more 
 manageable files.
+
+Lol. So it seems that javascript is such a broken language that it doesn't 
+even have a concept of requiring external files outside of manual 
+dependency management hell in the actual html document. Unless of course 
+you're prepared to rely on jquery or node or requirejs or any of a 
+number of technologies that have all been built to work around this terrible 
+excuse for a language. Including compile-to-js. Seriously: If you find 
+yourself having to write your app in a different language, and THEN WRITE 
+AN ENTIRE FUCKING COMPILER TO PORT IT TO javascript, then something has 
+gone seriously, seriously wrong.
+
+But it's looking like manual dependency mangement is my best bet if I 
+don't want to include something like jquery or node. What a fucking mess.
