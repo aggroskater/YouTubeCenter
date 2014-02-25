@@ -16,3 +16,7 @@ gone seriously, seriously wrong.
 
 But it's looking like manual dependency mangement is my best bet if I 
 don't want to include something like jquery or node. What a fucking mess.
+
+Honestly, it seems that there are so many interdependencies across 
+different segments of the script that jquery or node might be the best 
+bet. I'm still looking into other ways to organize all of it.
