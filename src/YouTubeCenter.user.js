@@ -1742,7 +1742,16 @@
       
       return pos;
     }
-    
+   
+    /* Kinda confused here. Thought XMLHTTPRequest was a 
+     * standard object. Looks like its being redefined here, where
+     * the details parameter holds all of the request info (url, method,
+     * etc). And there's a ytcenter.xhr module that's doing... something. 
+     * This all feels very roundabout, honestly. Though I'm a JS noob at 
+     * the moment, so I'm sure there's a good reason for it. This project 
+     * started as a userscript, so I'm kinda wondering how GM_XMLHTTPRequest 
+     * fits into all this.
+     */
     function $XMLHTTPRequest(details) {
       if (injected) {
         if (!window.ytcenter || !window.ytcenter.xhr) {
