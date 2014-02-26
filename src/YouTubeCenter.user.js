@@ -1751,6 +1751,12 @@
      * the moment, so I'm sure there's a good reason for it. This project 
      * started as a userscript, so I'm kinda wondering how GM_XMLHTTPRequest 
      * fits into all this.
+     *
+     * It's looking like there's a ytcenter.callback_db object that serves as a
+     * ... queue? ... of async XMLHTTPRequest objects. I'm guessing that every 
+     * XHR request gets logged to this queue and then it hits this function, 
+     * where the onload or onerror functions defined in the XHR are actually 
+     * called with the _args... Confusing. Going to keep looking into this.
      */
     function $XMLHTTPRequest(details) {
       if (injected) {
