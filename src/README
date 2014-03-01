@@ -20,3 +20,8 @@ don't want to include something like jquery or node. What a fucking mess.
 Honestly, it seems that there are so many interdependencies across 
 different segments of the script that jquery or node might be the best 
 bet. I'm still looking into other ways to organize all of it.
+
+UPDATE: Well, I don't see an easy way of using something like requireJS 
+(which I liked the most) with greasemonkey. But slinging our own modular 
+implementation with closures would involve a pretty massive rewrite from 
+what I can tell.
