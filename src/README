@@ -31,5 +31,9 @@ to be with userscripts. You can utilize the @require directive, but it seems
 that anything "required" in this manner is not updated; once its loaded 
 once, it's done. No more updates. Gonna see if this is truly the case.
 
+Edit: https://groups.google.com/forum/#!topic/greasemonkey-users/VeXg80oO7wY
+
+HAHAHA NOPE.
+
 I honestly don't know how @YePpHa stays on top of this and debugs it and 
 tests it. Sounds rough unless you were developing it from the gitgo.
