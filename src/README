@@ -25,3 +25,11 @@ UPDATE: Well, I don't see an easy way of using something like requireJS
 (which I liked the most) with greasemonkey. But slinging our own modular 
 implementation with closures would involve a pretty massive rewrite from 
 what I can tell.
+
+UPDATE: Hahahaha... shoot me. So it looks like modularity just isn't meant 
+to be with userscripts. You can utilize the @require directive, but it seems 
+that anything "required" in this manner is not updated; once its loaded 
+once, it's done. No more updates. Gonna see if this is truly the case.
+
+I honestly don't know how @YePpHa stays on top of this and debugs it and 
+tests it. Sounds rough unless you were developing it from the gitgo.
