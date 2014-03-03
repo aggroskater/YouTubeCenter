@@ -37,3 +37,11 @@ HAHAHA NOPE.
 
 I honestly don't know how @YePpHa stays on top of this and debugs it and 
 tests it. Sounds rough unless you were developing it from the gitgo.
+
+UPDATE: Sun 02 Mar 2014 2029:
+
+Well, with my work at https://github.com/aggroskater/chromium-extension/ , 
+it does at least seem feasible to use RequireJS within a chromium extension. 
+Need to do more research though and also figure out what to do with 
+Firefox extensions. Also need to figure out a way to "flatten" a RequireJS 
+project into a single file for continued greasemonkey use.
